@@ -1,0 +1,12 @@
+/assert  a_dje(A,B,C,Data_aplikimit,E):-aplikimet(A,B,C,Data_aplikimit,E),Data_aplikimit=20190131.
+/assert a_dje1(A,B,C,D,E):-a_dje(A,B,C,D,E).
+/assert a_dje2(A,B,C,D,E):-a_dje(A,B,C,D,E).
+/assert dje2(Sid):-a_dje1(A,Sid,Pozid,D,E),a_dje2(F,Sid,H,I,J),not(a_dje2(F,Sid,Pozid,I,J)).
+/assert sot0(Sid):-aplikimet(A,Sid,C,Data,E),not(Data=20190201).
+/assert prerja(A):-dje2(A),sot0(A).
+
+query(Sid,B,C,D,E,F,G,H,I,J,K,L,M):-prerja(Sid),studenti(Sid,B,C,D,E,F,G,H,I,J,K,L,M).
+
+
+
+

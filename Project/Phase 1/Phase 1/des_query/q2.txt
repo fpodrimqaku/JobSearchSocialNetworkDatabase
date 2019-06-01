@@ -1,0 +1,10 @@
+
+/assert  q1(Sid):-studenti_komenton_pozitat(Sid,B,C,Data,E),Data=20190130.
+/assert  q2(Sid):-studenti_komenton_pozitat(Sid,B,C,Data,E),Data=20190129.
+/assert  q3(Sid):-studenti_shares_pozitat(Sid,B,C,Data,E),Data=20190130.
+/assert  q4(Sid):-studenti_shares_pozitat(Sid,B,C,Data,E),Data=20190129.
+/assert s_k_poz(A):-q1(A),q2(A).
+/assert s_sh_poz(A):-q3(A),q4(A).
+/assert prerja(A):-s_k_poz(A),s_sh_poz(A).
+
+query(Sid,B,C):-prerja(Sid),studenti(Sid,B,C,D,E,F,G,H,I,J,K,L,M).

@@ -1,0 +1,7 @@
+/assert  ap(Aid):-adresa(Aid,B,Qyteti,D,E,F,G),Qyteti='Prishtine'.
+/assert t_m_poz1(A,B,C,D,E,Data_postimit,G):-pozita(A,B,C,D,E,Data_postimit,G),Data_postimit>20190100.
+/assert t_m_poz(A,B,C,D,E,Data_postimit,G):-t_m_poz1(A,B,C,D,E,Data_postimit,G),Data_postimit<20190132.
+/assert af_poz(Pozid1,B,C,D,E,F,G):-aplikimet(V,X,Pozid1,W,Z),pozita(Pozid1,B,C,D,E,F,G).
+/assert t_m_nafp(A,B,C,D,E,F,G):- t_m_poz(A,B,C,D,E,F,G),not(af_poz(A,B,C,D,E,F,G)).
+
+query1(A,B,C,D,Aid,F,G):-t_m_nafp(A,B,C,D,Aid,F,G),ap(Aid).

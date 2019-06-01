@@ -1,0 +1,6 @@
+/assert  ap(A):-adresa(A,B,C,D,E,F,G),C='Prishtine'.
+/assert sp(A,B,C,D,E,F,Adresa1,H,I,J,K,L,M):-ap(Adresa1),studenti(A,B,C,D,E,F,Adresa1,H,I,J,K,L,M).
+/assert spr(A,B,C,D,E,F,G,H,I,J,K,L,M):-projektet(O,Sid1,Q,R,S,T,U,V,X,Y),studenti(Sid1,B,C,D,E,F,G,H,I,J,K,L,M).
+
+query1(A,B,C,D,E,F,G,H,I,J,K,L,M):-sp(A,B,C,D,E,F,G,H,I,J,K,L,M),not(spr(A,B,C,D,E,F,G,H,I,J,K,L,M)).
+

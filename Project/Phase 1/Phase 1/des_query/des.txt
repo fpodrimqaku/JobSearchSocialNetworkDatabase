@@ -1,0 +1,62 @@
+%studenti(sid , emri , mbiemri , gjinia , ditelindja , statusi_martesor , aid , telefoni , email , username , fjalkalimi , foto_profili , pershkrimi  )
+ 
+%edukimi(eid , sid , viti_fillimit , viti_mbarimit , ufdid )
+ 
+ 
+%adresa(aid ,sid ,rruga ,qyteti ,shteti ,kodi_postal ,gpsx,gpsy )
+
+%aftesite_profesionale(apid , sid , aftesia )
+
+%hobi(hid ,sid , lloji )
+
+%f_librat(flid ,sid , titulli_librit , autori )
+
+%f_filmat(ffid , sid , titulli_filmit )
+
+
+%f_muzika(fmid , sid , zhanri )
+
+
+%gjuhet(gjid ,gjuha )
+
+%studenti_flet_gjuhen(gjid ,sid ,aftesia )
+
+%projektet(pid , sid , emri_projektit , data_fillimit , data_mbarimit , inid , vendi_realizimit , pershkrimi , roli , webfaqja )
+
+%tema(sid,eid,mid , titulli ,fusha_studimit )
+
+%mentori(mid , emri_mentorit , mbiemri_mentorit )
+
+
+%institucioni(inid , lloji , emri )
+
+%uni_fk_dpt(ufdid , emri_universitetit ,fakulteti ,departamenti )
+
+
+
+
+
+%studenti_punon(spnid , sid , pozita , kompania , data_fillimit , data_mbarimit )
+
+%kompania(cid , emri_kompanise , logo , pershkrimi , webfaqja , nr_telefonit , nr_punetoreve , lloji_kompanise ,  viti_themelimit , aid , username ,fjalekalimi )
+
+%pozita(pozid , cid , titulli_pozites , pershkrimi_pozites , aid , data_postimit , data_fundit_aplikimit )
+
+%aplikimet(apid , sid ,  pozid , data_aplikimit , koha_aplikimit )
+
+%komentet(kid , text )
+
+%studenti_komenton_pozitat(sid , pozid , kid , data , koha )
+
+%studenti_komenton_komentet(sid , kid , skid , data , koha ) 
+
+%studenti_pelqen_komentet(sid , kid , data , koha )
+
+%studenti_pelqen_pozitat(sid , pozid , data , koha )
+
+%studenti_shares_pozitat(sid , pozid , kid , data , koha )
+
+%aftesite_nevojshme(anid , pozid , aftesia )
+
+%aftesite_deshiruara(adid , pozid , aftesia )
+
